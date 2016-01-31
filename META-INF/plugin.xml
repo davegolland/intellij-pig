@@ -1,12 +1,12 @@
 <idea-plugin version="2">
-  <id>org.apache.pig.plugin.idea</id>
-  <name>Pig</name>
-  <version>1.7</version>
-  <vendor email="brandon.kearby at gmail com">Brandon Kearby &amp; Russell Melick</vendor>
+    <id>org.apache.pig.plugin.idea</id>
+    <name>Pig</name>
+    <version>1.7</version>
+    <vendor email="brandon.kearby at gmail com">Brandon Kearby &amp; Russell Melick</vendor>
 
-  <description>Apache Pig Language Plugin</description>
+    <description>Apache Pig Language Plugin</description>
 
-  <change-notes><![CDATA[
+    <change-notes><![CDATA[
 <h1>IntelliJ - Pig Plugin</h1>
 <p>
   Pig Plugin adds <a href="http://pig.apache.org">Apache Pig</a>
@@ -72,40 +72,43 @@ We are happy to announce that rmelick and I have unified our efforts in the Inte
   <li>Syntax and errors highlighting</li>
 </ul>
       ]]>
-  </change-notes>
+    </change-notes>
 
-  <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
-  <idea-version since-build="107.105"/>
+    <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
+    <idea-version since-build="107.105"/>
 
-  <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
-       on how to target different products -->
-  <!-- uncomment to enable plugin in all products -->
-  <depends>com.intellij.modules.lang</depends>
+    <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products -->
+    <depends>com.intellij.modules.lang</depends>
 
-  <application-components>
-    <!-- Add your application components here -->
-  </application-components>
+    <application-components>
+        <!-- Add your application components here -->
+    </application-components>
 
-  <project-components>
-    <!-- Add your project components here -->
-  </project-components>
+    <project-components>
+        <!-- Add your project components here -->
+    </project-components>
 
-  <actions>
-    <!-- Add your actions here -->
-  </actions>
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
 
-  <extensions defaultExtensionNs="com.intellij">
-    <lang.braceMatcher language="Pig" implementationClass="org.intellij.pig.PigBraceMatcher"/>
-    <fileTypeFactory implementation="org.intellij.pig.PigFileTypeFactory"/>
-    <lang.parserDefinition language="Pig" implementationClass="org.intellij.pig.PigParserDefinition"/>
-    <lang.syntaxHighlighterFactory key="Pig" implementationClass="org.intellij.pig.PigSyntaxHighlighterFactory"/>
-    <colorSettingsPage implementation="org.intellij.pig.PigColorSettingsPage"/>
-    <!--<annotator language="JAVA" implementationClass="org.intellij.pig.PigAnnotator"/>-->
-    <!--<completion.contributor language="Pig" implementationClass="org.intellij.pig.lang.completion.PigKeywordCompletionContributor"/>-->
-    <lang.refactoringSupport language="Pig" implementationClass="org.intellij.pig.lang.refactoring.PigRefactoringSupportProvider"/>
-    <lang.commenter language="Pig" implementationClass="org.intellij.pig.PigCommenter"/>
-    <lang.foldingBuilder language="Pig" implementationClass="org.intellij.pig.PigCodeFoldingBuilder"/>
-    <psi.referenceContributor implementation="org.intellij.pig.PigIdentifierReferenceContributor"/>
+    <extensions defaultExtensionNs="com.intellij">
+        <lang.formatter language="Pig" implementationClass="org.intellij.pig.PigFormattingModelBuilder"/>
+        <codeStyleSettingsProvider implementation="org.intellij.pig.PigCodeStyleSettingsProvider"/>
+        <lang.braceMatcher language="Pig" implementationClass="org.intellij.pig.PigBraceMatcher"/>
+        <fileTypeFactory implementation="org.intellij.pig.PigFileTypeFactory"/>
+        <lang.parserDefinition language="Pig" implementationClass="org.intellij.pig.PigParserDefinition"/>
+        <lang.syntaxHighlighterFactory key="Pig" implementationClass="org.intellij.pig.PigSyntaxHighlighterFactory"/>
+        <colorSettingsPage implementation="org.intellij.pig.PigColorSettingsPage"/>
+        <!--<annotator language="JAVA" implementationClass="org.intellij.pig.PigAnnotator"/>-->
+        <!--<completion.contributor language="Pig" implementationClass="org.intellij.pig.lang.completion.PigKeywordCompletionContributor"/>-->
+        <lang.refactoringSupport language="Pig"
+                                 implementationClass="org.intellij.pig.lang.refactoring.PigRefactoringSupportProvider"/>
+        <lang.commenter language="Pig" implementationClass="org.intellij.pig.PigCommenter"/>
+        <lang.foldingBuilder language="Pig" implementationClass="org.intellij.pig.PigCodeFoldingBuilder"/>
+        <psi.referenceContributor implementation="org.intellij.pig.PigIdentifierReferenceContributor"/>
 
-  </extensions>
+    </extensions>
 </idea-plugin>
