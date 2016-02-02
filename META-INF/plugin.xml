@@ -95,8 +95,9 @@ We are happy to announce that rmelick and I have unified our efforts in the Inte
     </actions>
 
     <extensions defaultExtensionNs="com.intellij">
-        <lang.formatter language="Pig" implementationClass="org.intellij.pig.PigFormattingModelBuilder"/>
         <codeStyleSettingsProvider implementation="org.intellij.pig.PigCodeStyleSettingsProvider"/>
+        <langCodeStyleSettingsProvider implementation="org.intellij.pig.PigLanguageCodeStyleSettingsProvider"/>
+        <lang.formatter language="Pig" implementationClass="org.intellij.pig.PigFormattingModelBuilder"/>
         <lang.braceMatcher language="Pig" implementationClass="org.intellij.pig.PigBraceMatcher"/>
         <fileTypeFactory implementation="org.intellij.pig.PigFileTypeFactory"/>
         <lang.parserDefinition language="Pig" implementationClass="org.intellij.pig.PigParserDefinition"/>

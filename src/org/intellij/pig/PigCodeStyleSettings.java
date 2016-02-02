@@ -6,6 +6,6 @@ import com.intellij.psi.codeStyle.CustomCodeStyleSettings;
 public class PigCodeStyleSettings extends CustomCodeStyleSettings {
 
     public PigCodeStyleSettings(CodeStyleSettings settings) {
-        super("SimpleCodeStyleSettings", settings);
+        super("PigCodeStyleSettings", settings);
     }
 }
