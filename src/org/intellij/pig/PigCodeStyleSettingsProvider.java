@@ -40,8 +40,17 @@ public class PigCodeStyleSettingsProvider extends CodeStyleSettingsProvider {
     }
 
     private static class SimpleCodeStyleMainPanel extends TabbedLanguageCodeStylePanel {
+        // http://www.programcreek.com/java-api-examples/index.php?api=com.intellij.application.options.TabbedLanguageCodeStylePanel
         public SimpleCodeStyleMainPanel(CodeStyleSettings currentSettings, CodeStyleSettings settings) {
             super(PigLanguage.INSTANCE, currentSettings, settings);
         }
+
+        @Override
+        protected void initTabs(CodeStyleSettings settings) {
+            addIndentOptionsTab(settings);
+            addSpacesTab(settings);
+            addWrappingAndBracesTab(settings);
+        }
     }
+
 }
